@@ -1,0 +1,23 @@
+{
+  "name": "color_pipette_tool",
+  "version": "1.0.0",
+  "description": "I am programming a color picker through mouse",
+  "main": "pipette.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "admirable-hippos"
+  },
+  "keywords": [
+    "color",
+    "picker",
+    "pipette"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "robotjs": "^0.6.0"
+  }
+}
