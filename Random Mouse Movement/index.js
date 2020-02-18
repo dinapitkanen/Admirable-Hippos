@@ -35,10 +35,8 @@ function randomMovement () {
     randomValue = Math.random();
 
     if ( randomValue < 0.6){
-        console.log('High');
         return randomValue * 6;
     }else {
-        console.log('Low');
         return randomValue * -6;
     }
 }
