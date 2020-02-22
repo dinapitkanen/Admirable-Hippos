@@ -1,0 +1,15 @@
+{
+  "name": "auto_login",
+  "version": "1.0.0",
+  "description": "autologin",
+  "main": "autologintest.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "md",
+  "license": "ISC",
+  "dependencies": {
+    "open": "^7.0.2",
+    "robotjs": "^0.6.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "classPath": [
+    "RuneLite.jar"
+  ],
+  "mainClass": "net.runelite.launcher.Launcher",
+  "vmArgs": [
+    "-XX:+DisableAttachMechanism",
+    "-Drunelite.launcher.nojvm\u003dtrue",
+    "-Xmx512m",
+    "-Xss2m",
+    "-XX:CompileThreshold\u003d1500",
+    "-Djna.nosys\u003dtrue",
+    "-Dsun.java2d.noddraw\u003dfalse",
+    "-Dsun.java2d.opengl\u003dfalse",
+    "-Djava.net.preferIPv4Stack\u003dtrue",
+    "-Djava.net.preferIPv4Addresses\u003dtrue",
+    "-Drunelite.launcher.version\u003d2.0.2",
+    "-XX:ErrorFile\u003dC:\\Users\\Crayo\\.runelite\\logs\\jvm_crash_pid_%p.log"
+  ]
+}
