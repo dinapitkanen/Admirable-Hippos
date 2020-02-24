@@ -1,7 +1,7 @@
 # auto_login
 
 ## description:
-	Small script that automatically logs into all of the accounts in loginInfo.txt.
+	Small script that automatically logs into the Runelite client with  all of the accounts in loginInfo.txt.
 
 ## note:
 
@@ -15,7 +15,7 @@
 	For MacOS: 
 	* Runelite has to be installed before running. The .dmg is included. 
 	* Made in Windows, so modules will have to be reinstalled.
-	* MacOS has disabled some of robotJS' features on newer versions of MacOS. In that case it won't work. 
+	* MacOS has disabled some of robotjs' features on newer versions of MacOS. In that case it won't work. 
 	
 	
 
