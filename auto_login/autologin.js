@@ -1,7 +1,6 @@
 /* Has to be run with a resolution of 1920x1080 on windows 10 atm. Resolution scaling scuffs the API's interpretation of the screen's resolution */
 
 //require necessary APIs
-
 const fs = require("fs"); //necessary for names and apsswords that aren't hard-coded
 const robot = require("robotjs"); //automatic tools
 const open = require("open"); //open desktop-level applications/websites
@@ -57,24 +56,48 @@ for(let row = 1, i = 0; row <= accountsFile.length -1; row++){
 // loop the login procedure for all accounts.
 for(let i in accounts){
     // get user's os
-    if(operatingSystem === "Win32"){
+    if(operatingSystem === "win32"){
         open(pathWin);
+        console.log("windows identified.")
     } else if (operatingSystem === "darwin"){
         open(pathMacOS);
+        console.log("macOS identified.")
     }
 
     // starting window pops up and disappears 3 times. These variables/conditionals help in dealing with that.
     let disappearCount = 0;
     let disappearBuffer = false;
     let updating = true;
+    let firstColor = "";
+    let midColor = "";
 
     while(updating === true){
         let color = robot.getPixelColor((screenWidth / 2),(screenHeight / 2));
 
+        if(firstColor === ""){
+            firstColor = color;
+            console.log("firstColor: " + firstColor)
+        } else if(firstColor === "1e1e1e"){
+            midColor = firstColor;
+            console.log("midColor: " + midColor)
+        }
+        if(midColor === "" && firstColor !== color && color !== "ffffff"){
+            midColor = color;
+            console.log("midColor: " + midColor)
+        }
         if(disappearCount >= 3){
             updating = false;
             continue;
         }
+        if(color === midColor){
+            disappearBuffer = false;
+        } else if (color !== midColor && disappearBuffer === false){
+            disappearCount++;
+            disappearBuffer = true;
+            console.log("disappear count: " + disappearCount);
+        }
+
+        /*
         if(color === "1e1e1e"){
             disappearBuffer = false;
         } else if (color !== "1e1e1e" && disappearBuffer === false){
@@ -82,6 +105,7 @@ for(let i in accounts){
             disappearBuffer = true;
             console.log("disappear count: " + disappearCount);
         }
+         */
     }
 
     // loop the colors of the screen until the client has been found
