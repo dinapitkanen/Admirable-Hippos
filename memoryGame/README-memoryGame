@@ -1,5 +1,43 @@
-This memory game is supposed to test your abillity to keep track of the outher lines of the object you just saw.
+# 1.What the project does
+
+This memory game was supposed to test your ability to keep track of the outher lines of the object you just saw.
 You will see an object for 3 seconds before it disappears and it's your turn to press mouse down to
 draw the lines of the object as you remember it. In Order to pass to next level the program will read wether
-you keep your mouse within a cose enough range or not (true or false). If not, level starts over.
+you keep your mouse within a close enough range or not (true or false). If not, level starts over.
 If webpage is refreshed, game starts over from beginning. I'm thinking 3 levels.
+
+
+# 2.Why the project is useful
+
+It was supposed to explore how I could challenge the users memory with a 'move your mouse'-task. 
+Due to realization of the browsers limits seen to allow robotjs get access to it when wanting to
+run the game I decided to drop this idea and move on with the iteration theEndOfTheRoad instead.
+
+# 3.How users can get started with the projectHow to use your code
+
+You cant.
+
+# 4.Who maintains and contributes to the project
+
+No maintaining will be done.
+
+## Jason Stallings
+
+Robotjs source https://robotjs.io/docs/syntax#getmousepos 
+
+var robot = require("robotjs");
+
+var mouse = robot.getMousePos();
+console.log("Mouse is at x:" + mouse.x + " y:" + mouse.y);
+scrollMouse(x, y);
+
+w3school
+
+https://www.w3schools.com/tags/canvas_rect.asp 
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.rect(20, 20, 150, 100);
+ctx.stroke();
+

@@ -1,15 +1,19 @@
 
 // Pseudo code:
 // Function Read mouse position & get pixel color;
+// Move mouse to start position, count down from 3.
 // Read mouse position and color pixel.
 // If (pixel color is green #10af0d -> log Success' & break. 
-// If pixel color is dark blue (#1f2e57) -> log 'Try again!' & rerun the program.
+// If pixel color is dark blue (#1f2e57) -> log 'Try again!'.
+// Move mouse back to start position (x = 183, y = 326) & rerun the game until executed 3 times.
 
+// require API Robotjs
 const robot = require('robotjs');
 
-//Declaring some variables which I will use later
+//Declaring variables which I will use later
 let mousePixelColor;
-let i = 5;
+let i = 3;
+let z = 0;
 
 //Console log to make control check of the hex code being read:
 //console.log(robot.getPixelColor(robot.getMousePos().x, robot.getMousePos().y));
@@ -17,7 +21,8 @@ let i = 5;
 //This function will be called when we run the .js file. This function also starts the game.
 startGameTimer();
 
-//This function logs a countdown from 5 to 1 and then calls the 'checkMouseInLine()' and stops the countdown
+//This function logs a countdown from 5 to 1 and then calls the 'checkMouseInLine()', moves your mouse to a precise position on screen
+// and stops the countdown when you're free to interact with the game.
 function startGameTimer(){
     robot.moveMouseSmooth(183, 325);
     setTimeout (function(){
@@ -61,14 +66,16 @@ function checkMouseInLine(){
         //reading the color code depending on computers tested with. 
         else if (mousePixelColor == '1f2a5a' || mousePixelColor == '1f2e57'){
             console.log('You stepped outside of the road! Try again!');
-            //robot.moveMouse(183, 325);
-            i = 5;
-            startGameTimer(); 
-            clearInterval(timer);
+            i = 3; 
+            z++;
+            if (z == 3){
+                clearInterval(timer);
+            }else{
+                
+                startGameTimer();
+                clearInterval(timer);
+            }
         }
     }, 50);
 }
 
-// Problems:
-// The mouse is not moved to start position when the program starts over.
-// This is a function I have been trying to add as effect when program reruns.
