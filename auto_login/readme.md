@@ -10,11 +10,12 @@
 
 	For Windows: 
 	* Runelite's .exe comes pre-packed and is ready to go.
-	* OS-level resolution scaling and robotjs don't work hand-in-hand. For Windows users, remove resolution scaling in the display settings.
+	* OS-level resolution scaling and robotjs don't work hand-in-hand. Remove resolution scaling in the display settings.
+	
 	For MacOS: 
 	* Runelite has to be installed before running. The .dmg is included. 
-	* Made in Windows, so modules will have to be reinstalled for mac users.
-	
+	* Made in Windows, so modules will have to be reinstalled.
+	* MacOS has disabled some of robotJS' features on newer versions of MacOS. In that case it won't work. 
 	
 	
 
