@@ -1,0 +1,12 @@
+//script looks for new lines when determining number of accounts
+un:maxderlowtestaccount1@gmail.com
+pw:automaticloginiscool
+
+un:maxderlowtestaccount2@gmail.com
+pw:automaticloginiscool
+
+un:maxderlowtestaccount3@gmail.com
+pw:automaticloginiscool
+
+un:maxderlowtestaccount4@gmail.com
+pw:automaticloginiscools

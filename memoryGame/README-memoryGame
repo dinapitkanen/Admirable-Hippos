@@ -1,0 +1,5 @@
+This memory game is supposed to test your abillity to keep track of the outher lines of the object you just saw.
+You will see an object for 3 seconds before it disappears and it's your turn to press mouse down to
+draw the lines of the object as you remember it. In Order to pass to next level the program will read wether
+you keep your mouse within a cose enough range or not (true or false). If not, level starts over.
+If webpage is refreshed, game starts over from beginning. I'm thinking 3 levels.

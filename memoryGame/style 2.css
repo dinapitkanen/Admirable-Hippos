@@ -1,0 +1,29 @@
+* {
+margin: 0;
+padding: 0;
+text-decoration: none;
+
+}
+
+body {
+    background-color: #01298c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: #F5F0F0;
+    font-size: 21px;
+    text-align: center;
+    font-family: Roboto;
+
+
+}
+h1{
+    font-size: 31px;
+}
+
+.instructions {
+margin-top: 20px;
+margin-right: 300px;
+margin-bottom: 80px;
+margin-left: 300px;
+}
