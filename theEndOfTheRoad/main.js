@@ -87,14 +87,14 @@ function checkMouseInLine(){
         mousePixelColor = robot.getPixelColor(robot.getMousePos().x, robot.getMousePos().y);
 
         //If the color of the pixel is green it's a win and the program closes
-        if (mousePixelColor == '00b800' || '00b700'){
+        if (mousePixelColor == '00b800' || mousePixelColor == '00b700' || mousePixelColor == '10af0d'){
             console.log('You WON');
             clearInterval(timer);
         }
 
         //If the color of the pixel is not green or light blue it means that the mouse is outside of the course and you fail
         //The timer starts over and you get a second chance
-        else if (mousePixelColor == '1f2a5a' || '1f2e57'){
+        else if (mousePixelColor == '1f2a5a' || mousePixelColor == '1f2e57'){
             console.log('You FAILED, start over');
             //robot.moveMouse(183, 325);
             i = 5;
