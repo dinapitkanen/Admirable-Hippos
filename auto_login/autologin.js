@@ -21,7 +21,7 @@ const operatingSystem = process.platform;
 console.log(operatingSystem);
 
 const pathWin = __dirname + "\\runelite\\runelite.exe";
-const pathMacOS =  "/applications/program/runelite.app";
+const pathMacOS =  "/applications/runelite.app";
 
 // Search for the client window and automate the login procedure.
 function clientFound(color, i, x, y) {
