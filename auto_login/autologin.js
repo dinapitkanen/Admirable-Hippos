@@ -26,8 +26,9 @@ const pathMacOS =  "/applications/runelite.app";
 function clientFound(color, i, x, y) {
     console.log("COLOR FOUND");
     while(color === "1e1e1e"){
-        y++;
-        color = robot.getPixelColor(x,y)}
+            y++;
+            color = robot.getPixelColor(x,y)
+        }
         robot.moveMouse(x,(y - 2));
         robot.mouseClick();
         robot.keyTap("enter");
@@ -37,7 +38,6 @@ function clientFound(color, i, x, y) {
         robot.typeString(accounts[i].password.substr(3));
         robot.keyTap("enter");
 }
-
 //TODO: add some error handling and shit
 //Get all of the accounts from the file
 for(let row = 1, i = 0; row <= accountsFile.length -1; row++){
@@ -120,9 +120,17 @@ for(let i in accounts){
         let color = robot.getPixelColor(x,y);
         console.log("color: " + color + " x: " + x + " y: " + y);
         if(color === "1e1e1e"){
-            clientFound(color, i, x, y);
+            sleep(5000);
+                clientFound(color, i, x, y);
             i++;
             break;
         }
+    }
+}
+
+//nicked from SO: https://stackoverflow.com/a/16624104
+function sleep(miliseconds) {
+    let currentTime = new Date().getTime();
+    while (currentTime + miliseconds >= new Date().getTime()) {
     }
 }
