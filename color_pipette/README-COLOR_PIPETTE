@@ -1,2 +1,26 @@
-I want to create a color picker attached to the position of the mouse
-that returns the hex code where ever the mouse is positioned over the screen.
+# What the project does
+
+I created a color picker attached to the position of the mouse that returns the hex code where ever the mouse is positioned over the screen every second until you stop the code. I attached an image to the project in index.html. 
+
+# Why the project is useful
+
+It was useful when I had to try out the method of robotjs in preparation for an extended implementation of the syntax (se theEndOfTheRoad).
+
+# How users can get started with the project
+
+Run the code through terminal, type node main.js and enter.
+You don't need the browser of the image attached to this project, if there's any color you wish to get the hex code of just make sure your mouse if over it when running the program and end the program. 
+
+# Who maintains and contributes to the project
+
+No maintaining will be done.
+
+## Jason Stallings
+https://github.com/octalmage/robotjs
+
+getPixelColor
+var hex = robot.getPixelColor(mouse.x, mouse.y);
+console.log("#" + hex + " at x:" + mouse.x + " y:" + mouse.y);
+https://robotjs.io/docs/examples#screen 
+
+## Color wheel image src: http://clipart-library.com/clipart/1855984.htm 
