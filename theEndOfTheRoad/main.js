@@ -1,66 +1,27 @@
-//* let robot = require('robotjs'); //*
 
-// start mouse position x: 183, y: 325
-// green color 'success' #10af0d
-// road light blue color #3f87ba
-// error dark blue color #1f2e57
-
-// declare start position of mouse
-//let startMousePosition = { 183, 325}
-
-//declare value of count from start
-//let getPixelCount = 0; 
-
-// declare 
-//getPixelColor(x, y);
-
-//walkTheRoad();
-
- // function walkTheRoad () {
-   // robot.moveMouseSmooth(startMousePosition);
-   // getPixelColor(robot.getPixelColor); {
-      //  robot.getPixelColor;
-      //  if ( getPixelColor == '#10af0d' ) {
-       //     alert('Success!');
-       //     break;
-       // } else if ( getPixelColor == '#1f2e57') {
-       //     alert('Try again!');
-       //     robot.moveMouse(startMousePosition); 
-       // } else if (getPixelCount < 4) {
-       //     getPixelColor;
-       // } else (getPixelCount > 4); {
-       //         break;
-       //     }
-       // }
-//}; 
-    
-//console.log(walkTheRoad);
-
-
-// pseudo code:
+// Pseudo code:
 // Function Read mouse position & get pixel color;
-// If (pixel color is green #10af0d -> alert 'Success!' & break. 
-// Else if pixel color is dark blue (#1f2e57) -> alert 'Try again!' & return mouse to start position.
-// Else call function getPixelColor again.
+// Read mouse position and color pixel.
+// If (pixel color is green #10af0d -> log Success' & break. 
+// If pixel color is dark blue (#1f2e57) -> log 'Try again!' & rerun the program.
 
 const robot = require('robotjs');
 
-//Declaring some variables which we will use later
+//Declaring some variables which I will use later
 let mousePixelColor;
 let i = 5;
 
-//robot.moveMouseSmooth(0, 0);
+//Console log to make control check of the hex code being read:
 //console.log(robot.getPixelColor(robot.getMousePos().x, robot.getMousePos().y));
 
 //This function will be called when we run the .js file. This function also starts the game.
-
 startGameTimer();
 
 //This function logs a countdown from 5 to 1 and then calls the 'checkMouseInLine()' and stops the countdown
 function startGameTimer(){
+    robot.moveMouseSmooth(183, 325);
     setTimeout (function(){
         if(i==0){
-            //robot.moveMouse(183, 325);
             checkMouseInLine();
         }else{
             console.log(i);
@@ -86,16 +47,20 @@ function checkMouseInLine(){
         //Here we get the pixel color of the pixel that the mouse is hovering over
         mousePixelColor = robot.getPixelColor(robot.getMousePos().x, robot.getMousePos().y);
 
-        //If the color of the pixel is green it's a win and the program closes
+        //If the color of the pixel is green it's a win and the program closes.
+        //I have added more hex codes due to differences in
+        //reading the color code depending on computers tested with. 
         if (mousePixelColor == '00b800' || mousePixelColor == '00b700' || mousePixelColor == '10af0d'){
-            console.log('You WON');
+            console.log('You made it to the end of the road! Good job!');
             clearInterval(timer);
         }
 
         //If the color of the pixel is not green or light blue it means that the mouse is outside of the course and you fail
         //The timer starts over and you get a second chance
+        //I have added more hex codes due to differences in
+        //reading the color code depending on computers tested with. 
         else if (mousePixelColor == '1f2a5a' || mousePixelColor == '1f2e57'){
-            console.log('You FAILED, start over');
+            console.log('You stepped outside of the road! Try again!');
             //robot.moveMouse(183, 325);
             i = 5;
             startGameTimer(); 
@@ -105,6 +70,5 @@ function checkMouseInLine(){
 }
 
 // Problems:
-// The countdown goes on for 5 seconds and then it consoles 'you FAILED..', then starts over and over.
-// This happens no matter where the mouse is positioned. 
-// Also the mouse is not moved to any position when the program starts over.
+// The mouse is not moved to start position when the program starts over.
+// This is a function I have been trying to add as effect when program reruns.
