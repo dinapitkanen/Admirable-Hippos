@@ -50,11 +50,11 @@ let mousePixelColor;
 let i = 5;
 
 //robot.moveMouseSmooth(0, 0);
-console.log(robot.getPixelColor(robot.getMousePos().x, robot.getMousePos().y));
+//console.log(robot.getPixelColor(robot.getMousePos().x, robot.getMousePos().y));
 
 //This function will be called when we run the .js file. This function also starts the game.
 
-//startGameTimer();
+startGameTimer();
 
 //This function logs a countdown from 5 to 1 and then calls the 'checkMouseInLine()' and stops the countdown
 function startGameTimer(){
