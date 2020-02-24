@@ -1,13 +1,13 @@
-#auto_login
+# auto_login
 
-##description:
+## description:
 	Small script that automatically logs into all of the accounts in loginInfo.txt.
 	Made in Windows, so modules might have to be reinstalled for mac users.
 
-##note:
+## note:
 	OS-level resolution scaling and robotjs don't work hand-in-hand.
 	For Windows users, remove resolution scaling in the display settings.
 
-##refs:
+## refs:
 	Sindre Sorhus' open: https://github.com/sindresorhus/open
 	Jason Stalling's robotjs: https://github.com/octalmage/robotjs 
