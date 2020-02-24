@@ -1,5 +1,3 @@
-  -moveMouseSmooth()
-  -mouseToggle() 
 # What the project does
 
 The function of this small program is to close a fullscreen app on a windows computer by moving the mouse to the close
