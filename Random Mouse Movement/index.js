@@ -26,7 +26,7 @@ function timerMouseMovement () {
         if (true){
             timerMouseMovement();
         }
-    }, 50000);
+    }, 1000);
 }
 
 
