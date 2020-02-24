@@ -5,14 +5,14 @@ This project implements Robotjs ability to read mouse position and read pixel co
 
 # Why the project is useful
 
-I'm exploring implementation in a situation where one would want to design some kind of fine movement skills in a game setting. Thanks to robotjs ability to read both small and larger pixel fields it can make a game get a detailed field of challenges just by drawing the background boards and keep record the colors you wish the program to react to.
+I'm exploring implementation in a situation where one would want to design some kind of fine movement skills in a game setting. Thanks to robotjs ability to read both small and larger pixel fields it can make a game get a detailed field of challenges just by drawing the background boards and keep record the colors you wish the program to react to. Also, the possibility to steer the mouse gives another layer of interactivity between the user and the game. 
 
 # How users can get started with the project
 
-1. You will need Visual Studio Code or some other IDE.
+1. You will need Visual Studio Code or some other IDE, and make sure that IDE lets your program of choice steer your computer.
 2. Open the index.html in live server, you can adjust the size depending on how easy or hard you want the task to be. Make sure the bigger part of the image is visible to you and that the window is positioned along side the upper left corner.
 3. Open the IDEs terminal of main.js.
-4. While the theEndOfTheRoad image is visible to you in in live server, type: node main.js and press enter.
+4. While the theEndOfTheRoad image is visible to you in live server, type:node main.js and press enter.
 6. You will see the count down be executed in the terminal. When the countdown stops you'll know you are free to move mouse and it's being read.
 7. Now try to reach the green dot without touching the dark blue field. Remember: no mouse click needed. You have 3 chances. Good luck!
 
