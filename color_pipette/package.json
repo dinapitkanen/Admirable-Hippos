@@ -1,23 +1,47 @@
-{
-  "name": "color_pipette_tool",
-  "version": "1.0.0",
-  "description": "I am programming a color picker through mouse",
-  "main": "pipette.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "admirable-hippos"
-  },
-  "keywords": [
-    "color",
-    "picker",
-    "pipette"
-  ],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "robotjs": "^0.6.0"
-  }
-}
+let robot = require('robotjs');
+
+// start mouse position x: 183, y: 325
+// green color 'success' #10af0d
+// road light blue color #3f87ba
+// error dark blue color #1f2e57
+// then --> back to startMousePosition
+
+// declare start position of mouse
+let startMousePosition = { 183: 325,}
+
+//declare value of count from start
+let getPixelCount = 0; 
+
+// declaring functions
+
+getPixelColor();
+
+walkTheRoad();
+
+function walkTheRoad () {
+    robot.moveMouseSmooth(startMousePosition);
+    getPixelColor(x, y); {
+        robot.getPixelColor;
+        if ( getPixelColor == '#10af0d' ) {
+            alert('Success!');
+            break;
+        } else if ( getPixelColor == '#1f2e57') {
+            alert('Try again!');
+            robot.moveMouse(startMousePosition); 
+        } else if (getPixelCount < 4) {
+            getPixelColor;
+        } else (getPixelCount > 4); {
+                break;
+            }
+        }
+};
+    
+console.log(walkTheRoad);
+
+
+// pseudo code:
+// Function Read mouse position & get pixel color;
+// If (pixel color is green #10af0d -> alert 'Success!' & break. 
+// Else if pixel color is dark blue (#1f2e57) -> alert 'Try again!' & return mouse to start position.
+// Else call function getPixelColor again.
+
