@@ -53,6 +53,7 @@ let i = 5;
 //console.log(robot.getPixelColor(robot.getMousePos().x, robot.getMousePos().y));
 
 //This function will be called when we run the .js file. This function also starts the game.
+
 startGameTimer();
 
 //This function logs a countdown from 5 to 1 and then calls the 'checkMouseInLine()' and stops the countdown
@@ -86,7 +87,7 @@ function checkMouseInLine(){
         mousePixelColor = robot.getPixelColor(robot.getMousePos().x, robot.getMousePos().y);
 
         //If the color of the pixel is green it's a win and the program closes
-        if (mousePixelColor == '00b700'){
+        if (mousePixelColor == '00b800'){
             console.log('You WON');
             clearInterval(timer);
         }
