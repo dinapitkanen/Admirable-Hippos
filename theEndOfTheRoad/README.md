@@ -1,7 +1,7 @@
 
 # What the project does
 
-This project implements Robotjs ability to read mouse position and read pixel color according to the position of mouse. When you start the program your mouse will be moves to a starting position and a count down from 3 will begin. When reach 0 the game is reading you mouse position every 5 millisecond. By moving mouse within the light blue area the program keeps running. When hovering over the green dot the console will log 'You made it to the end of the road! Good job!' and the program will stop running. If the mouse touches the dark blue field the console will log 'You stepped outside of the road! Try again!', move your mouse to start position and a count down from 3 to 1 will start before the game starts again. You can fail the task 3 times before the program stops running.
+This project implements Robotjs ability to read mouse position, read pixel color according to the position of mouse and move the mouse to a set start position. When you start the program your mouse will be moved to a starting position and a count down from 3 will begin. When reach 0 the game is reading you mouse position every 5 millisecond. By moving mouse within the light blue area the program keeps running. When hovering over the green dot the console will log 'You made it to the end of the road! Good job!' and the program will stop running. If the mouse touches the dark blue field the console will log 'You stepped outside of the road! Try again!', move your mouse to start position and a count down from 3 to 1 will start before the game starts again. You can fail the task 3 times before the program stops running.
 
 # Why the project is useful
 
