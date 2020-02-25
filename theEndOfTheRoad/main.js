@@ -24,7 +24,7 @@ Console log to make control check of the hex code being read:
 startGameTimer();
 
 /*
-This function logs a countdown from 5 to 1 and then calls the 'checkMouseInLine()', moves your mouse to a precise position on screen
+This function logs a countdown from 3 to 1 and then calls the 'checkMouseInLine()', moves your mouse to a precise position on screen
 and stops the countdown when you're free to interact with the game.
 */
 
@@ -54,21 +54,22 @@ function checkMouseInLine(){
     //Everything in this function will be repeated every 50 milliseconds
     let timer = setInterval (function(){
 
-        //Here we get the pixel color of the pixel that the mouse is hovering over
+        //Here we get the pixel color of the pixel where the mouse is hovering
         mousePixelColor = robot.getPixelColor(robot.getMousePos().x, robot.getMousePos().y);
 
-        //If the color of the pixel is green it's a win and the program closes.
-        //I have added more hex codes due to differences in
-        //reading the color code depending on computers different screen settings. 
+        /*
+        If the color of the pixel is green it's a win and the program closes.
+        I have added more hex codes due to differences in reading the color code depending on computers different screen settings.
+        */ 
         if (mousePixelColor == '00b800' || mousePixelColor == '00b700' || mousePixelColor == '10af0d'){
             console.log('You made it to the end of the road! Good job!');
             clearInterval(timer);
         }
-
-        //If the color of the pixel is not green or light blue it means that the mouse is outside of the course and you fail
-        //The timer starts over and you get a second chance
-        //I have added more hex codes due to differences in
-        //reading the color code depending on computers different screen settings. 
+        /*
+        If the color of the pixel is not green or light blue it means that the mouse is outside of the course and you fail
+        The timer starts over and you get a second chance.
+        I have added more hex codes due to differences in reading the color code depending on computers different screen settings. 
+       */
         else if (mousePixelColor == '1f2a5a' || mousePixelColor == '1f2e57'){
             console.log('You stepped outside of the road! Try again!');
             i = 3; 
